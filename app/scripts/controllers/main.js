@@ -9,9 +9,9 @@
  */
 angular.module('angularjsF1App')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.seasons = [];
+	ergastAPIservice.getDrivers().success(function (response) {
+        //Dig into the response to get the relevant data
+        $scope.seasons = response.MRData.SeasonsTable;
+    });
   });
