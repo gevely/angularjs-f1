@@ -8,7 +8,7 @@
  * Controller of the angularjsF1App
  */
 angular.module('angularjsF1App')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, ergastAPIService) {
     $scope.seasons = [];
 	ergastAPIservice.getDrivers().success(function (response) {
         //Dig into the response to get the relevant data
