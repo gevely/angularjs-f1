@@ -20,4 +20,5 @@ angular.module('angularjsF1App')
 		}
 
 		return ergastAPI;
+		
 	});
